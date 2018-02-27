@@ -1,0 +1,115 @@
+body{
+  padding: 0px;
+  margin: 0px;
+  font-size: 1rem;
+}
+
+#navbar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #bf8040;
+  border: none;
+  border-bottom: solid 4px #86592d;
+  padding: 10px;
+  font-size: 2rem;
+  color: white;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #cccccc;
+    overflow: hidden;
+    transition: 0.5s;
+    padding: 60px 0px;
+}
+
+.sidenav a:hover {
+    cursor: pointer;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    text-decoration: none;
+    color: black;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 0px;
+    margin: 0px;
+    background-color: #f2f2f2;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+#container{
+  padding: 10px 10px 50px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.quranText{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 15px;
+  border-radius: 15px;
+}
+
+.quranText:hover{
+  background-color: #e6e6e6;
+}
+
+.quranText__index{
+  font-size: 1rem;
+  margin: 0px;
+  padding: 5px
+}
+
+.quranText__ar{
+  font-size: 2rem;
+  margin: 10px 0px 20px 0px;
+}
+
+.quranText__en{
+  font-size: 1rem;
+  margin: 0px 0px 20px 0px;
+}
+
+.sidenav__list{
+  padding: 0px 5px 100px 15px;
+  margin: 0px;
+  list-style-type: none;
+}
+
+.sidenav__list__li{
+  margin-bottom: 20px;
+}
+
+.sidenav__list__li a{
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  color: black;
+  transition: 0.5s;
+}
+
+.github-img{
+  vertical-align:middle;
+}
