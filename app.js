@@ -19,7 +19,6 @@ app.set('view engine', 'hbs');
 hbs.registerPartials(__dirname + '/views/partials');
 // register helper for surahs list
 const quranOrder = quranJS.chronologicalOrder();
-
 hbs.registerPartial('sidenav', () => {
   let str = "";
   for(let item in quranOrder){

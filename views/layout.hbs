@@ -3,19 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{{title}}</title>
+    <title>Revelation</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <script src="/javascripts/index.js"></script>
   </head>
   <body>
     <div id="main">
       <div id="navbar">
-        <div>
+        <div class="navbar__openbtn">
           <span onclick="openNav()" style="cursor:pointer;">&#9776;</span>
+        </div>
+        <div class="navbar__title">
           <strong>Chronological Quran</strong>
         </div>
         <div>
-          <img src="/images/GitHub-Mark-Light-32px.png" alt="github" class="github-img" />
+          <a href="https://github.com/claudebarde/chronological-quran" target="_blank" title="Github Repository"><img src="/images/GitHub-Mark-Light-32px.png" alt="github" class="github_img" /></a>
         </div>
       </div>
       <div id="mySidenav" class="sidenav">
@@ -24,9 +26,7 @@
           {{> sidenav}}
         </div>
       </div>
-      <div id="container">
-        {{{body}}}
-      </div>
+      {{{body}}}
     </div>
   </body>
 </html>
