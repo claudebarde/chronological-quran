@@ -140,12 +140,12 @@ body{
 #tanzil_link{
   text-align: center;
   padding-bottom: 50px;
+  font-size: 0.7rem;
 }
 
 #tanzil_link a{
   color: blue;
   text-decoration: none;
-  font-size: 0.7rem;
   font-style: italic;
 }
 
