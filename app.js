@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 var hbs = require('hbs');
 
 var index = require('./routes/index');
-var quranRoute = require('./routes/quranRoute');
+var suratRoute = require('./routes/suratRoute');
 const quranJS = require('./quranJS/quranJS');
 
 var app = express();
@@ -42,7 +42,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // app.use('/', index);
 // app.use('/quran/:id', quranRoute);
 app.use(index);
-app.use(quranRoute);
+app.use(suratRoute);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

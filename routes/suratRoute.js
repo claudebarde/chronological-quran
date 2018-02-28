@@ -3,11 +3,11 @@ var router = express.Router();
 const suraRequest = require('./fetchSura');
 
 /* GET users listing. */
-router.get('/quran/:id', function(req, res, next) {
-  if(isNaN(req.params.id) || req.params.id > 114){
+router.get('/quran/:surat', function(req, res, next) {
+  if(isNaN(req.params.surat) || req.params.surat > 114){
     res.render('error');
   } else {
-    res.render('index', suraRequest(req.params.id));
+    res.render('displayText', suraRequest(req.params.surat));
   }
 });
 

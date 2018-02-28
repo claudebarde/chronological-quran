@@ -10,7 +10,7 @@ const suraRequest = (id) => {
     }
   }
 
-  return { title: sura.info.name, ename: sura.info.ename, text: text }
+  return { title: sura.info.name, ename: sura.info.ename, text }
 }
 
 module.exports = suraRequest;

@@ -3,26 +3,33 @@ body{
   margin: 0px;
   font-size: 1rem;
   font-family: Verdana, Arial;
+  background-color: #F8FCE6;
 }
 
 #navbar{
   position: fixed;
   top: 0;
   width: 100%;
-  height: 50px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   background-color: #4d94ff;
   border: none;
   border-bottom: solid 4px #005ce6;
-  padding: 20px 10px;
   font-size: 2rem;
   color: white;
+  padding: 20px 0px;
 }
 
 .navbar__openbtn{
-  margin: 0px 15px 0px 0px;
+  margin: 0px 15px;
+}
+
+.navbar__title a{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
 }
 
 .sidenav {
@@ -55,26 +62,21 @@ body{
 #main {
     transition: margin-left .5s;
     padding: 0px;
+    padding-top: 80px;
     margin: 0px;
-    margin-top: 80px;
-    background-color: #ffffe6;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-
-@media screen and (max-width: 400px) {
-  #navbar {font-size: 1.5rem;}
 }
 
 #container{
-  padding: 10px 10px 50px 10px;
+  padding: 50px 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
+}
+
+#container__quranText{
+  margin: 0px 50px;
 }
 
 .quranText{
@@ -132,4 +134,60 @@ body{
 .error_img{
   height: 100%;
   width: 100%;
+}
+
+#tanzil_link{
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+#tanzil_link a{
+  color: blue;
+  text-decoration: none;
+  font-size: 0.7rem;
+  font-style: italic;
+}
+
+#quran_logo{
+  width: 256px;
+}
+
+.index__list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-left: 40px;
+}
+
+.index__links{
+  margin: 5px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0px 40px;
+  text-align: left;
+}
+
+.index__links a{
+  text-decoration: none;
+  color: black;
+}
+
+.index__links__item__ar{
+  font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.index__links__item__en{
+  font-size: 0.8rem;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+@media screen and (max-width: 400px) {
+  #navbar {font-size: 1.5rem;}
+  #container__quranText {margin: 0px 10px;}
 }
