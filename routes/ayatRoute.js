@@ -1,13 +1,13 @@
 var express = require('express');
 var router = express.Router();
-const { suraRequest } = require('./fetchSura');
+const { ayatRequest } = require('./fetchSura');
 
 /* GET users listing. */
-router.get('/quran/:surat', function(req, res, next) {
-  if(isNaN(req.params.surat) || req.params.surat > 114){
+router.get('/quran/:surat/:ayat', function(req, res, next) {
+  if(isNaN(req.params.surat) || req.params.surat > 114 || isNaN(req.params.ayat)){
     res.render('error');
   } else {
-    const result = suraRequest(req.params.surat);
+    const result = ayatRequest(req.params.surat, req.params.ayat);
     if(result === undefined){
       res.render('error');
     } else {

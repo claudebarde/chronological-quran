@@ -13,4 +13,14 @@ const suraRequest = (id) => {
   return { title: sura.info.name, ename: sura.info.ename, text }
 }
 
-module.exports = suraRequest;
+const ayatRequest = (surat, ayat) => {
+  const sura = quranJS.get(surat, ayat);
+
+  if(sura !== undefined){
+    const text = `<div class="quranText"><p class="quranText__index">${ayat} - </p><p class="quranText__ar">${sura.text["ar"]}</p><p class="quranText__en">${sura.text["en"]}</p></div>`
+
+    return { title: sura.info.name, ename: sura.info.ename, text };
+  }
+}
+
+module.exports = { suraRequest, ayatRequest };

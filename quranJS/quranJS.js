@@ -96,7 +96,7 @@ class QuranJS {
     } else if (parseInt(sura) > 0 && parseInt(ayat) > 0) { // if sura and ayat are provided
       if(this.text[sura]){ // if sura exists
         if(this.text[sura]["text"][ayat]){ // if ayat exists
-          return this.text[sura]["text"][ayat];
+          return {info: this.text[sura]["info"], text: this.text[sura]["text"][ayat]};
         } else {
           return undefined;
         }
